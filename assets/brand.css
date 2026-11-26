@@ -49,3 +49,8 @@ h1, h2, h3, .t-display { hyphens: manual; -webkit-hyphens: manual; }
 
 /* посилання у списках статей мають бути видимими як посилання */
 .prose li a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #9da7c9; }
+
+/* the closing photo has a fixed height, so the footer rows grow with it instead of one screen */
+footer.closing, footer.closing:has(> .wrap > .closing__cta > .close__media) { height: auto; min-height: 0; }
+footer.closing > .wrap, footer.closing:has(> .wrap > .closing__cta > .close__media) > .wrap { grid-template-rows: auto auto; }
+@media (max-width: 639px) { footer.closing:has(> .wrap > .closing__cta > .close__media) > .wrap { row-gap: var(--s-8); } }
