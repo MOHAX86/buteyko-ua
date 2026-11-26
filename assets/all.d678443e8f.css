@@ -2204,3 +2204,6 @@ footer.closing > .wrap, footer.closing:has(> .wrap > .closing__cta > .close__med
 @media (max-width: 639px) { footer.closing:has(> .wrap > .closing__cta > .close__media) > .wrap { row-gap: var(--s-8); } }
 .vid--still { cursor: default; }
 .vid--still:hover img { transform: none; }
+.footer__col h3 a{color:inherit;text-decoration:none;display:inline-block;padding:4px 0}
+.footer__col h3 a:hover,.footer__col h3 a:focus-visible{text-decoration:underline;text-underline-offset:4px}
+@media (min-width:640px){footer.closing{height:auto;min-height:0}footer.closing>.wrap{height:auto;grid-template-rows:auto auto}}
