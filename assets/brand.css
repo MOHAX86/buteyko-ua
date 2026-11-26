@@ -54,3 +54,7 @@ h1, h2, h3, .t-display { hyphens: manual; -webkit-hyphens: manual; }
 footer.closing, footer.closing:has(> .wrap > .closing__cta > .close__media) { height: auto; min-height: 0; }
 footer.closing > .wrap, footer.closing:has(> .wrap > .closing__cta > .close__media) > .wrap { grid-template-rows: auto auto; }
 @media (max-width: 639px) { footer.closing:has(> .wrap > .closing__cta > .close__media) > .wrap { row-gap: var(--s-8); } }
+
+/* home hero: a plain photo, no video behind it */
+.vid--still { cursor: default; }
+.vid--still:hover img { transform: none; }
