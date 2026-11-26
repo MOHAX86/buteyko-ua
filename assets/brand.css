@@ -41,3 +41,11 @@ h1, h2, h3, .t-display { hyphens: manual; -webkit-hyphens: manual; }
 .prose-wrap > *, .prose > * { min-width: 0; }
 .prose-wrap h1 { overflow-wrap: break-word; }
 .prose .btn { white-space: normal; text-align: center; max-width: 100%; height: auto; min-height: var(--btn-h); line-height: 1.25; padding-block: 11px; }
+
+/* таймер паузи всередині тексту статті: кнопки не успадковують стиль посилань */
+.prose .cp .btn--primary, .prose .cp .btn--primary:hover { color: var(--action-ink); text-decoration: none; }
+.prose .cp p { margin-inline: auto; }
+.prose .cp { margin-block: 12px 8px; }
+
+/* посилання у списках статей мають бути видимими як посилання */
+.prose li a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #9da7c9; }
