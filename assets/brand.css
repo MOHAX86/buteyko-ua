@@ -1,14 +1,17 @@
 /* Брендбук Академії здоров’я Аліка Муллахметова (отримано 25.11.2026):
    сині #001048 #404F87 #9DA7C9, коричневі #4F3127 #836A62 #C6B4AF, білий; Roboto Condensed.
    Підключається після site2.css і лише перевизначає змінні та кілька деталей. */
+/* поки Roboto Condensed завантажується, текст показує системний шрифт тієї ж ширини, тож рядки не «стрибають» */
+@font-face { font-family: "RC Fallback"; font-weight: 100 500; src: local("Arial"), local("ArialMT"), local("Roboto"); size-adjust: 90%; }
+@font-face { font-family: "RC Fallback"; font-weight: 600 900; src: local("Arial Bold"), local("Arial-BoldMT"), local("Roboto Bold"), local("Roboto-Bold"); size-adjust: 84.7%; }
 :root {
   --p-bg: #ffffff; --p-surface: #f2f3f9; --p-ink: #001048; --p-muted: #404f87;
   --p-accent: #001048; --p-accent-ink: #ffffff; --p-action: #001048; --p-action-ink: #ffffff;
   --p-inv-bg: #001048; --p-inv-surface: #17265f; --p-inv-ink: #ffffff; --p-inv-muted: #c3c9e0;
   --p-inv-accent: #ffffff; --p-inv-accent-ink: #001048; --p-inv-action: #ffffff; --p-inv-action-ink: #001048;
-  --font-display: "Roboto Condensed", system-ui, sans-serif;
-  --font-text: "Roboto Condensed", system-ui, sans-serif;
-  --font-mono: "Roboto Condensed", system-ui, sans-serif;
+  --font-display: "Roboto Condensed", "RC Fallback", system-ui, sans-serif;
+  --font-text: "Roboto Condensed", "RC Fallback", system-ui, sans-serif;
+  --font-mono: "Roboto Condensed", "RC Fallback", system-ui, sans-serif;
   --gold: #c6b4af; --gold-soft: #e8dfdc;
   --display-tracking: -0.005em;
   --display-tracking-xl: -0.01em;
