@@ -2226,3 +2226,4 @@ footer.closing > .wrap, footer.closing:has(> .wrap > .closing__cta > .close__med
 .nav.is-open .nav__actions .lang-switch:not(.lang-switch~.lang-switch):not(:has(~.lang-switch)){grid-column:1/-1}
 }
 main > #goal.section { height: auto; min-height: 0; }
+@media (max-width: 359px) { .footer .socials { gap: 1px; flex-wrap: wrap; } }
