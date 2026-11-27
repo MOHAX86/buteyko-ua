@@ -33,3 +33,28 @@
 .prose-card span { color: var(--p-muted); font-size: 16px; line-height: 1.5; }
 .prose-card:hover { border-color: var(--p-accent); }
 .prose-note { margin: 32px 0 0; padding-top: 16px; border-top: 1px solid var(--line, rgba(0,0,0,.12)); font-size: 14px; line-height: 1.5; color: var(--p-muted); max-width: 68ch; }
+/* the ventilation table (Ukrainian text instead of the old Russian picture): wider than the text column, scrolls on a phone */
+.prose-wrap:has(.vk), .prose:has(> .vk) { grid-template-columns: minmax(0, 1fr); }   /* the wide table must not widen the text column */
+.prose figure.vk { --vk-w: min(1040px, calc(100vw - 32px)); width: var(--vk-w); max-width: none; margin-inline: calc((100% - var(--vk-w)) / 2) 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.vk__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line, rgba(0,0,0,.12)); border-radius: var(--r-sm, 10px); }
+.vk table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 14px; line-height: 1.3; text-align: center; font-variant-numeric: tabular-nums; background: var(--p-bg, #fff); }
+.vk caption { padding: 12px; font-family: var(--font-display); font-size: 18px; font-weight: 700; text-align: left; }
+.vk th, .vk td { border: 1px solid var(--line, rgba(0,0,0,.12)); padding: 7px 5px; vertical-align: middle; font-weight: 400; }
+.vk thead th { background: var(--p-surface, #f2f3f9); font-weight: 600; font-size: 13px; }
+.vk tbody th { font-weight: 600; }
+.vk .vk__state { min-width: 92px; font-weight: 600; }
+.vk .vk__side span { writing-mode: vertical-rl; transform: rotate(180deg); display: inline-block; white-space: nowrap; }
+.vk .vk__norm > * { background: var(--p-ink, #001048); color: var(--p-bg, #fff); font-weight: 700; }
+.vk .vk__death { font-weight: 700; background: var(--p-surface, #f2f3f9); }
+.prose figure.vk figcaption { font-size: 14px; line-height: 1.5; color: var(--p-muted); max-width: 68ch; margin-inline: auto; }
+.vk__hint { display: none; }
+@media (max-width: 800px) { .vk__hint { display: inline; } }
+@media (max-width: 600px) {
+  .vk caption { font-size: 16px; padding: 10px; }
+  .vk table { min-width: 660px; font-size: 13px; }
+  .vk th, .vk td { padding: 6px 3px; }
+  .vk thead th { font-size: 11px; hyphens: manual; }
+  .vk .vk__state { min-width: 0; width: 40px; }
+  .vk .vk__state span { writing-mode: vertical-rl; transform: rotate(180deg); display: inline-block; }
+  .vk .vk__special, .vk .vk__death { text-align: left; padding-left: 12px; }
+}
