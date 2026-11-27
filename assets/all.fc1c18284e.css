@@ -2207,3 +2207,22 @@ footer.closing > .wrap, footer.closing:has(> .wrap > .closing__cta > .close__med
 .footer__col h3 a{color:inherit;text-decoration:none;display:inline-block;padding:4px 0}
 .footer__col h3 a:hover,.footer__col h3 a:focus-visible{text-decoration:underline;text-underline-offset:4px}
 @media (min-width:640px){footer.closing{height:auto;min-height:0}footer.closing>.wrap{height:auto;grid-template-rows:auto auto}}
+#registry .md__filters{display:flex;flex-wrap:wrap;max-width:none;align-self:end}
+#registry .md__list{margin-top:var(--s-5)}
+@media (max-width:1023px){
+.nav.nav--pill.is-open{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--bg)}
+.nav.is-open .nav__links{padding-bottom:calc(var(--btn-h) * 3 + 72px)}
+.nav.is-open .nav__item .dd{grid-column:1/-1}
+.nav.is-open .nav__item .dd>summary{width:100%}
+.nav.is-open .dd__list{position:static;min-width:0;padding:0 0 8px;box-shadow:none;background:transparent}
+.nav.is-open .nav__actions .srch-btn{order:3;width:100%;height:48px;gap:10px}
+.nav.is-open .nav__actions .srch-btn::after{content:"Поиск по сайту"}
+.nav.is-open .nav__actions .srch-btn:lang(en)::after{content:"Search the site"}
+}
+@media (max-width:1023px){
+.nav.is-open .nav__actions{grid-template-columns:1fr 1fr}
+.nav.is-open .nav__actions>.btn,.nav.is-open .nav__actions .srch-btn{grid-column:1/-1}
+.nav.is-open .nav__actions .lang-switch{width:100%;margin:0;border:1px solid var(--line-strong);border-radius:999px}
+.nav.is-open .nav__actions .lang-switch:not(.lang-switch~.lang-switch):not(:has(~.lang-switch)){grid-column:1/-1}
+}
+main > #goal.section { height: auto; min-height: 0; }
